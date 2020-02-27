@@ -4,23 +4,25 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AlbumListComponent } from './albums/album-list/album-list.component';
-import { AlbumCardComponent } from './albums/album-card/album-card.component';
 import { ReverseStrPipe } from './reverse-str.pipe';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { AlbumsModule } from './albums/albums.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumListComponent,
-    AlbumCardComponent,
-    ReverseStrPipe,
-    WelcomeComponent
+     ReverseStrPipe,
+    WelcomeComponent,
+    NavbarComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AlbumsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
